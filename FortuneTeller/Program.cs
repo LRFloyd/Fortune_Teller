@@ -29,7 +29,32 @@ namespace FortuneTeller
             int age = 0;
             int remainingWork = 75;
             
+            // User Input for User Info
+            Console.WriteLine("What is your First Name ");
+            firstName = Console.ReadLine().ToUpper();
+            Console.Clear();
             
+            //If you wants to end the program
+            if ((firstName == "QUIT") || (firstName == "LEAVE") || (firstName == "EXIT"))
+            {
+                Console.WriteLine(" Nobody likes a quitter...");
+                return;
+            }
+            
+            Console.WriteLine("What is your Last Name");
+            lastName = Console.ReadLine().ToUpper();
+            Console.Clear();
+            
+            if ((lastName == "QUIT") || (lastName == "LEAVE") || (lastName == "EXIT"))
+            {
+                Console.WriteLine(" Nobody likes a quitter...");
+                return;
+            }
+            Console.WriteLine("Nice to mee you " + firstName + lastName);
+            Console.Clear();
+            
+            
+
         }
     }
 }
