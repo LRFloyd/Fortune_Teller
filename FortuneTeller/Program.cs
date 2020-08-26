@@ -53,6 +53,34 @@ namespace FortuneTeller
             Console.WriteLine("Nice to mee you " + firstName + lastName);
             Console.Clear();
             
+            //Retirement Check
+            Console.WriteLine("What is your age");
+            check = Console.ReadLine().ToUpper();
+            if ((check == "QUIT") || (check == "LEAVE") || (check == "EXIT"))
+            {
+                Console.WriteLine(" Nobody likes a quitter...");
+                return;
+            }
+            else 
+            {
+                age = int.Parse(check);
+                Console.Clear();
+            }
+            
+            summ = remainingWork - age;
+            retire = summ.ToString(); 
+            
+            if (retire.EndsWith("1") || retire.EndsWith("3") || retire.EndsWith("5") || retire.EndsWith("7") || retire.EndsWith("9"))
+            {
+                summ = summ -10;
+                retire = summ.ToString();
+            }
+            else
+            {
+                summ = summ +10;
+                retire = summ.ToString(); 
+            }
+            
             
 
         }
