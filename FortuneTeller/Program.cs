@@ -81,6 +81,31 @@ namespace FortuneTeller
                 retire = summ.ToString(); 
             }
             
+            //Birth Month and Bank Account Calculation 
+            Console.WriteLine("What is your birth month, ex: 01 for January");
+            bMonth = int.Parse(Console.ReadLine());
+            Console.Clear();
+
+            if ((bMonth < 1) && (bMonth > 12))
+            {
+                money = "$0.00";
+            }
+            else if ((bMonth >= 1) && (bMonth <= 4))
+            {
+                summ = 99*3;
+                money = summ.ToString();
+            }
+            else if ((bMonth >= 5) && (bMonth <= 8))
+            {
+                summ = 1000 * 2;
+                money = "$" + summ.ToString();
+            }
+            else if ((bMonth >= 9) && (bMonth <= 12))
+            {
+                summ = 1000000 * 2;
+                money = "$" + summ.ToString();
+            }
+
             
 
         }
