@@ -9,7 +9,10 @@ namespace FortuneTeller
     {
         static void Main(string[] args)
         {
-            
+            /*Project 1 FortuneTeller complete
+             *LaVelle R Floyd
+             *LRFloyd 
+             */
 
             //Welcome Message
             Console.WriteLine("Welcome to Fortune Teller... a game where there is a 99.9% chance most of this fortune WONT come true.");
