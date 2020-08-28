@@ -106,7 +106,93 @@ namespace FortuneTeller
                 money = "$" + summ.ToString();
             }
 
+            //Color Selection and Transportation Determination
+            Console.WriteLine("Please select your favorite color from ROYGBIV");
+            color = Console.ReadLine().ToUpper();
+            Console.Clear();
+
+            if (color == "HELP")
+            {
+                Console.WriteLine("ROYGBIV is an acronym for the following colors");
+                Console.WriteLine("R---ED");
+                Console.WriteLine("O---RANGE");
+                Console.WriteLine("Y---ELLOW");
+                Console.WriteLine("G---REEN");
+                Console.WriteLine("B---LUE");
+                Console.WriteLine("I---NDIGO");
+                Console.WriteLine("V---IOLET");
+                Console.WriteLine("Please select one");
+                Console.ReadLine();
+                Console.Clear();
+            }
+            else if (color == "EXIT")
+            {
+                Console.WriteLine("No body likes a quitter...");
+                return;
+            }
+
+            switch (color)
+            {
+                case "RED":
+                    transport = "10 BMW's";
+                    break;
             
+                case "ORANGE":
+                    transport = "RTA is your best friend";
+                    break;
+                
+                case "YELLOW":
+                    transport = "Scooter"; 
+                    break;
+            
+                case "GREEN":
+                    transport = "Chevy Impala";
+                    break;
+                
+                case "BLUE":
+                    transport = "fLYiNg nImBUs!?...better watch out for Goku...";
+                    break;
+                
+                case "INDIGO":
+                    transport = "Audi....the old 2000 one though"; 
+                    break;
+            
+                case "VIOLET":
+                    transport = "2025 Mustang";
+                    break;
+                
+                default:
+                    color = "you walking bruhhh";
+                    break;
+            }
+            
+            //Vaction Home via Siblings input
+            Console.WriteLine("How many siblings do you have");
+            siblings = int.Parse(Console.ReadLine());
+            Console.Clear();
+            summ = siblings; 
+
+            if (summ < 1)
+            {
+                home = "Welp you live you in a cave, not like you need much";
+            }
+            else if (summ == 1)
+            {
+                home = "Moving up from the hood now we got an apartment";
+            }
+            else if (summ == 2)
+            {
+                home = "CLEVELAND HTS BRUGGGGGG";
+            }
+            else if (summ == 3)
+            {
+                home = "University HTS 5 bedroom";
+            }
+            else if (summ >= 4)
+            {
+                home = "Hollywood, Im talking 23 acres";
+            }
+            Console.WriteLine(firstName + " " + lastName + " will retire in " + retire + " years with " + money + " in the bank. A vacation home in " + home + " , and " + transport + " as transportation!" );
 
         }
     }
